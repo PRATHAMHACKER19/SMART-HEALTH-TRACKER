@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Tracker by Pratham Joshi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Health Tracker</h1>
+    <p class="byline">App by Pratham Joshi</p>
+
+    <!-- Medicine Reminder -->
+    <section>
+      <h2>Medicine Reminders</h2>
+      <form id="medicineForm">
+        <input type="text" id="medName" placeholder="Medicine Name" required />
+        <input type="time" id="medTime" required />
+        <button type="submit">Save Reminder</button>
+      </form>
+      <table id="reminderTable">
+        <thead><tr><th>Medicine</th><th>Time</th><th>Action</th></tr></thead><audio id="alarmAudio" src="alarm.mp3" preload="auto"></audio>
+
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Blood Pressure -->
+    <section>
+      <h2>Blood Pressure Log</h2>
+      <form id="bpForm">
+        <input type="date" id="bpDate" required />
+        <input type="number" id="systolic" placeholder="Systolic" required />
+        <input type="number" id="diastolic" placeholder="Diastolic" required />
+        <button type="submit">Add BP Entry</button>
+      </form>
+      <table id="bpTable">
+        <thead><tr><th>Date</th><th>Systolic</th><th>Diastolic</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <canvas id="bpChart"></canvas>
+    </section>
+
+    <!-- Oxygen Tracker -->
+    <section>
+      <h2>Oxygen Saturation Log</h2>
+      <form id="o2Form">
+        <input type="date" id="o2Date" required />
+        <input type="number" id="o2Value" placeholder="SpO2 %" required />
+        <button type="submit">Add O2 Entry</button>
+      </form>
+      <table id="o2Table">
+        <thead><tr><th>Date</th><th>O2 (%)</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <canvas id="o2Chart"></canvas>
+    </section>
+
+    <!-- Sleep Tracker -->
+    <section>
+      <h2>Sleep Log</h2>
+      <form id="sleepForm">
+        <input type="date" id="sleepDate" required />
+        <input type="time" id="sleepStart" required />
+        <input type="time" id="sleepEnd" required />
+        <button type="submit">Add Sleep Entry</button>
+      </form>
+      <table id="sleepTable">
+        <thead><tr><th>Date</th><th>Start</th><th>End</th><th>Duration (hrs)</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <canvas id="sleepChart"></canvas>
+    </section>
+
+    <!-- Export Button -->
+    <section>
+      <button id="exportBtn">Export All Data as CSV</button>
+    </section>
+  </div>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<section>
+  <button id="deleteAllBtn" class="danger">Delete All Data</button>
+</section>

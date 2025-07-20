@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.byline {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-top: 30px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+#exportBtn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  background: #2196F3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#exportBtn:hover {
+  background: #1976D2;
+}
+button.danger {
+  width: 100%;
+  padding: 10px;
+  background-color: #e53935;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button.danger:hover {
+  background-color: #c62828;
+}
